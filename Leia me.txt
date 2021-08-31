@@ -1,0 +1,71 @@
+#Resoluto
+Por Anis Ali Khan
+
+Resoluto é a minha opinião sobre o rastreador de bugs que funciona.
+
+Não há bala de prata, mas não deveria ter de fazer uma nova bala de sete em sete anos. 
+
+Uma década de apoio informático na estrada, no centro de dados, na sede, no escritório, em casa e com o cliente ensinou-me que os localizadores de bugs, as ferramentas ITSM CRM, o software ERP, os sistemas de emissão de tickets  são:
+
+1. Bloqueados
+2. Incómodo
+3. Muito mais complexo do que a maioria dos seres humanos se preocupa em utilizar realmente
+4. Lento
+5. Limitado de formas que parecem óbvias para mim
+6. Complicado para se manter atualizado
+7. Não muito satisfatório de usar
+8. Propenso a erros
+
+Estou a escrever o meu primeiro rastreador de bugs. Quero escrevê-lo de uma forma que não seja vulnerável a estes pontos fracos que já identifiquei. Quero escrever um código que pelo menos possa utilizar para o resto da minha vida se assim o decidir.
+
+Notas de caso: ServiceNow
+A SNow é uma das ferramentas mais omnipresentes no mercado para rastrear questões numa empresa.
+No entanto, há muitas coisas que muito software livre já pode fazer fora da caixa, o que o SNow não faz.
+
+Exemplo: iTunes e Chrome têm pesquisas que encontram resultados à medida que se digita. Se este é um módulo que pode ser utilizado numa aplicação comercial, porque é que não é utilizado no SNow?
+Quase me parece que uma aplicação cara que requer a implementação efectiva por um ou vários arquitectos, consultores e programadores deve, no mínimo, proporcionar poder de pesquisa ao mesmo nível que o software de consumo. Este não é o caso da maioria das implementações.
+
+A Snow está disponível no prem e na nuvem. Esta disponibilidade híbrida torna complicada a sua contínua realimentação. Na prática, a maioria das organizações à escala empresarial estão várias versões atrás, e todo o processo de manter o software actualizado é obscuro, opaco para o utilizador final, e basicamente algo que os utilizadores finais temem.
+Gosto de receber actualizações de software, como no fast ring do Windows Insider, o que lhe dá algo interessante, excitante e bom para esperar cada vez que o software é actualizado. Vou aprender sobre uma nova funcionalidade. Será algo novo, vou poder ver como funciona. Se eu gostar, se for algo que eu possa usar, eu vou. Imediatamente, e normalmente funciona a maior parte do tempo.
+A experiência de atualização para o Snow é mais do tipo "ouviste dizer que eles empurraram uma nova atualização? Não. Mas o sistema esteve em baixo durante 7 horas na segunda-feira, não admira". É uma experiência descontraída para os utilizadores finais, o que os faz sentir desdém e drena qualquer entusiasmo que possam ter de experimentar algumas funcionalidades novas e legais.
+Pior do que isso, as funcionalidades não são óbvias, nem consistentemente documentadas, nem visualizadas graficamente para o utilizador, uma vez que estão prestes a utilizar funcionalidades impactadas da nova versão pela primeira vez.
+Para mim, isto significa que um grau inaceitável de aplicação das melhores práticas da cultura DevOps está a ser permitido na arquitectura do software.
+
+Lição aprendida:
+Uma plataforma sólida como serviço deve tornar impossível ou difícil fazer as coisas da forma errada.
+Deve recompensar o programador, integrador e utilizador final quando estes fazem algo da forma correcta.
+Deve ser rápida, tolerante a falhas, altamente disponível, escalável, e sentir-se sem esforço para usar, trabalhar, melhorar e ampliar.
+A documentação deve ser consistente, facilmente digerível e localizada de forma autónoma.
+Quando existem ferramentas de tradução automática para, no mínimo, fornecer ferramentas prontamente disponíveis para tornar o sistema disponível e consumível em muitas línguas, esta deve ser a norma, em vez de alguma tarefa difícil ou implausível de implementar.
+
+Notas de caso: Dynacom
+
+Dyunacom foi a primeira aplicação de contabilidade em língua francesa desenvolvida para cidadãos do Québec a ser utilizada para contabilidade em empresas que tentam informatizar o seu processo contabilístico. A aplicação foi desenvolvida em VB 6 e até hoje continua a ser uma aplicação VB 6 que ainda está a ser utilizada, mas apenas por cerca de 3500 empresas. A empresa cresceu para empregar 50-100 pessoas, mas as práticas inconsistentes de documentação dos programadores originais tornam o software impossível de escalar e escalar, agora que passaram 20 anos na produção. No final, muito poucos programadores ainda hoje se preocupam em escrever VB 6, e ainda menos novos programadores se preocupam em aprender o que é considerado uma linguagem herdada.
+Além disso, o software foi escrito de uma forma que torna extremamente difícil, basicamente impraticável a sua tradução para línguas. Ninguém atualmente empregado nessa empresa sabe sequer como abordar este problema. É considerado tão dispendioso considerar que nem sequer podem servir clientes de países onde o inglês ou o francês não são as principais línguas faladas.
+Este é um forte contraste com muitos produtos Google, que estão tipicamente disponíveis em muitas línguas. Mesmo os websites de pequenas empresas são por vezes integrados com os serviços de tradução online do Google, permitindo a qualquer pessoa traduzir as suas páginas web com um único clique.
+Parece razoável, lógico e desejável que isto seja ubíquo para o desenvolvimento de software hoje em dia. Não é, de todo, o caso.
+
+Notas de caso: Dinâmica
+
+Dynamics é um software de gestão de recursos empresariais da Microsoft. Desde a gestão de inventário, programação, fabricação e expedição, até ao rastreio de emissões, espera-se que o software ERP seja um sistema ubíquo em uso em todos os departamentos de uma organização. O software é tão complexo para o utilizador final, contudo, que várias implementações estão simultaneamente em uso e cada uma proporciona uma experiência mais ou menos adequada. Mais uma vez, observe que este é um software que, embora extenso nas suas capacidades, é difícil de adaptar a diferentes casos de utilização. O suporte técnico utiliza-o para seguir casos, mas todo um ecrã de campos que não são necessariamente relevantes para o utilizador final são exibidos simultaneamente numa página ruidosa e avassaladora no navegador da web. No final do serviço ao cliente, os RMAs são processados utilizando uma versão diferente do software, que tem licenças limitadas e só é acessível através de um VM. O software não suporta copiar & colar, embora o copiar & colar seja suportado em outras VMs que possa utilizar no decurso do seu trabalho. Isto é frustrante e atrasa desnecessariamente os processos de negócios de rotina. A experiência deve ser fácil para o utilizador final de cumprir as suas tarefas sem dor. Além disso, o software após cerca de uma década de utilização pelo departamento de TI provou ser tão complexo de adaptar, está a ser abandonado por completo, e as lições aprendidas estão a ser aplicadas em
+
+Notas de caso: Assistente do Helpdesk
+um novo ecossistema na esperança de resolver os problemas já existentes e de responder às necessidades reais dos utilizadores finais, em vez de tentar esgrimir uma solução semi-adequada utilizando pedaços de um software extemamente complexo com o qual poucos indivíduos se sentem à vontade para trabalhar.
+
+O software é assustador até para utilizadores finais experientes, poucos têm qualquer esperança de que venha a ser melhorado a um custo razoável ou dentro de um período de tempo razoável, e está a ser abandonado.
+
+Na verdade, a perda de confiança é tão significativa que os utilizadores sentem que o novo CRM ou será totalmente estrangeiro e apresentará uma série de problemas totalmente nova. 
+
+O software não deve fazer-nos sentir que toda a categoria de software a que pertence é um obstáculo.
+
+Devem existir falhas muito profundas para que tal seja o caso.
+
+O HDA é na realidade uma aplicação Windows bastante rápida. Pode utilizá-lo mesmo que a sua ligação de rede caia temporariamente, e não precisa de um navegador da web para o fazer. Funciona normalmente com o tipo de velocidade e suavidade que se pode esperar de uma aplicação de ambiente de trabalho Windows nativa. Os utilizadores finais não se importam realmente de não a poderem utilizar a partir de um web browser, porque há poucos que o fariam. Os empregados da empresa estão a utilizar computadores de secretária no trabalho ou portáteis em viagem ou em casa, e uma experiência Web não é uma característica necessária.
+O HDA está no entanto a ser abandonado em favor do ServiceNow, que só é acessível a partir da web. Isto tem o mesmo incômodo de atualizar aspectos do HDA, sem o tornar acessível offline ou sem a utilização de um web browser. ServiceNow é na realidade muitas vezes mais lento na prática do que o HDA, e oferece méritos questionáveis sobre o HDA.
+Por que razão deveria um software assistente de helpdesk ser difícil de estender ao navegador?
+Porque deveria ser difícil utilizá-lo directamente a partir da linha de comando?
+Porque deveria ser difícil utilizar este software para sempre sem o abandonar completamente e chamar uma empresa de consultoria com um processo de desenvolvimento opaco para reinventar a roda?
+Parece que a arquitectura fundamental da aplicação torna difícil continuar a trabalhar com ela.
+Este nunca deveria ser o caso, e o código que se escreve deveria viver mais do que você.
+Penso que este pode ser o caso se o código for sabiamente escrito.
+
